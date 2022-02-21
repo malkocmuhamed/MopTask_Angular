@@ -1,0 +1,28 @@
+
+<div class="forma">
+    <form class="text-center border border-light p-5"
+    (ngSubmit)="registerUser()" action="" #userForm="ngForm">
+
+        <p class="h4 mb-4">Registracija</p>
+
+        <div class="form-row mb-4">
+        <div class="col">
+            <input type="text" name="firstName" [(ngModel)]="userModel.firstName" #firstName="ngModel" class="form-control" placeholder="Ime" required>
+        </div>
+        <div class="col">
+            <input type="text" name="lastName" [(ngModel)]="userModel.lastName" #lastName="ngModel" class="form-control" placeholder="Prezime" required>
+        </div>
+        </div>
+
+        <input type="email" name="email" [(ngModel)]="userModel.email" #email="ngModel" class="form-control mb-4" placeholder="E-mail" required>
+
+        <input type="password" name="password" [(ngModel)]="userModel.password" #password="ngModel" minlength="5" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        Šifra treba da sadrži najmanje 5 karaktera
+        </small>
+       
+        <button mdbBtn color="info" [disabled]="userForm.form.invalid" block="true" class="my-4" type="submit">Registruj se</button>
+        <hr>
+
+    </form>
+</div>  

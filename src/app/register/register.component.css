@@ -1,0 +1,9 @@
+form
+{
+    width: 30%;
+}
+.forma
+{
+    display: flex;
+    justify-content: center;
+}

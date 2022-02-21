@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "firstName": "Muhamed",
+      "lastName": "Malkoc",
+      "email": "malkocmuhamed999@gmail.com",
+      "password": "Felicia1",
+      "id": 1
+    },
+    {
+      "firstName": "Drugi",
+      "lastName": "Korisnik",
+      "email": "ahmed@size.ba",
+      "password": "12345",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
