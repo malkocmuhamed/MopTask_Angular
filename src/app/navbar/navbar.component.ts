@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ProfilepageComponent } from '../profilepage/profilepage.component';
+import { User } from '../_models/user.model';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  public users: User[];
+  constructor(public dialog: MatDialog, public usersService: UserService) { }
 
   ngOnInit(): void {
+  }
+
+  viewUser(): void {
+    this.dialog.open(ProfilepageComponent, {
+      width: '450px',
+      data: {   
+        name: 'muhamed'
+      }   
+    });
+  }
+
+  logout(){
+    this.usersService.logout();
   }
 
 }

@@ -18,6 +18,13 @@ import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { ProfilepageComponent } from './profilepage/profilepage.component';
+import {MatCardModule} from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditprofileComponent } from './editprofile/editprofile.component';
 
 
 @NgModule({
@@ -26,7 +33,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     RegisterComponent,
     LoginComponent,
     HomepageComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfilepageComponent,
+    EditprofileComponent
   ],
   imports: [
     HttpClientModule,
@@ -41,8 +50,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    MatToolbarModule
-  ],
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatDialogModule,
+    BrowserAnimationsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

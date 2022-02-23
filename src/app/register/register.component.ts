@@ -12,7 +12,6 @@ import { UserService } from '../_services/user.service';
 export class RegisterComponent implements OnInit {
 
 userModel = <User>{};
-
 cardForm: FormGroup;
 
 constructor(private fb: FormBuilder, private usersService: UserService) {

@@ -1,18 +1,31 @@
 {
   "users": [
     {
-      "firstName": "Muhamed",
-      "lastName": "Malkoc",
-      "email": "malkocmuhamed999@gmail.com",
-      "password": "Felicia1",
+      "firstName": "Muhaemd",
+      "lastName": "Korisnik",
+      "email": "muhamed.malkoc2018@size.ba",
+      "password": "user1",
       "id": 1
     },
     {
-      "firstName": "Drugi",
+      "firstName": "Muhaemd",
+      "lastName": "user",
+      "email": "muhamed.malkoc2018@size.ba",
+      "password": "user2",
+      "id": 4
+    },
+    {
+      "firstName": "Muhaemd",
       "lastName": "Korisnik",
       "email": "ahmed@size.ba",
-      "password": "12345",
-      "id": 2
+      "id": 6
+    },
+    {
+      "firstName": "Muhaemd",
+      "lastName": "user",
+      "email": "malkocmuhamed999@gmail.com",
+      "password": "user4",
+      "id": 7
     }
   ],
   "comments": [

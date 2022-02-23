@@ -2,9 +2,14 @@
     <form class="text-center border border-light p-5"
     [formGroup]="cardForm" (ngSubmit)="login()" #userForm="ngForm">
 
+<!--     
+        <input type="hidden" [(ngModel)]="this.firstname">
+        <input type="hidden" [(ngModel)]="this.lastname">
+     -->
+
         <p class="h4 mb-4">Prijava</p>
-    
-        <input type="email" formControlName="email" class="form-control mb-4" placeholder="E-mail" required>
+
+        <input type="email" formControlName="email" class="form-control mb-4"  placeholder="E-mail" required>
     
         <input type="password"  formControlName="password" class="form-control mb-4" placeholder="Password" required>
     

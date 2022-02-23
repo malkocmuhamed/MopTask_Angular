@@ -1,7 +1,14 @@
-    <mat-toolbar color="primary">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      </button>
-      <span>My App</span>
-      <span class="example-spacer"></span>
+<mat-toolbar color="primary" class="nav">
+    <div class="example-button-container" (click)="viewUser()">
+        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+    </div>
+      <span style="margin-left: 20px;">Uredi profil</span>
+      <span class="example-spacer"></span> 
     
-    </mat-toolbar>
+    <div class="logo">
+        <button mat-raised-button color="warn" (click)="logout()">Odjava</button>
+    </div>
+    
+</mat-toolbar>
