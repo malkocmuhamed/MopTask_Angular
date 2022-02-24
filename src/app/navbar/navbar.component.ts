@@ -17,6 +17,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // isLoggedIn(){
+  //   return this.usersService.isLoggedIn();
+  // }
+
   viewUser(): void {
     this.dialog.open(ProfilepageComponent, {
       width: '450px',
@@ -24,6 +28,10 @@ export class NavbarComponent implements OnInit {
         name: 'muhamed'
       }   
     });
+  }
+
+  getusername(){
+    return this.usersService.userData.firstName;
   }
 
   logout(){

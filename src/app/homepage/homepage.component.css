@@ -1,0 +1,35 @@
+.homediv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+.divs{
+    margin: 50px;
+}
+.divs button{
+    background-color: rgb(62, 62, 133);
+    color: white;
+    width: 120px;
+    height: 50px;
+}
+.divs button:hover{
+    background-color: red;
+}
+form{
+    text-align: center;
+    margin-top: 30px;
+}
+mat-form-field
+{
+    width: 60%;
+}
+.qnbtn{
+    margin: 20px;
+}
+.qnbtn button{
+    background-color: rgb(62, 62, 133);
+    color: white;
+    width: 120px;
+    height: 50px;
+}

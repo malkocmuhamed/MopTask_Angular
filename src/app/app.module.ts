@@ -25,7 +25,10 @@ import {MatCardModule} from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditprofileComponent } from './editprofile/editprofile.component';
-
+import { HomepagequestionsComponent } from './homepagequestions/homepagequestions.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
     HomepageComponent,
     NavbarComponent,
     ProfilepageComponent,
-    EditprofileComponent
+    EditprofileComponent,
+    HomepagequestionsComponent
   ],
   imports: [
     HttpClientModule,
@@ -55,7 +59,10 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
     MatIconModule,
     MatCardModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatTabsModule,
+    MatTableModule
     ],
   providers: [],
   bootstrap: [AppComponent]

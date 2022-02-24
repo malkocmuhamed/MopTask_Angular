@@ -26,13 +26,99 @@
       "email": "malkocmuhamed999@gmail.com",
       "password": "user4",
       "id": 7
+    },
+    {
+      "firstName": "Muhaemd",
+      "lastName": "Korisnik",
+      "email": "ahmed@size.ba",
+      "password": "123456",
+      "id": 8
     }
   ],
-  "comments": [
+  "questions": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 1,
+      "question": "some comment",
+      "questionuser": "muhamed"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "question": "kako se zoves",
+      "id": 4
+    },
+    {
+      "question": "kako se zoves",
+      "id": 5
     }
   ],
   "profile": {

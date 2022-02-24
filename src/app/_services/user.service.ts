@@ -14,7 +14,7 @@ export const AUTH_USER_DATA = 'user-data';
 export class UserService {
 
     public userData: User;
-    public authToken: string |null = null;
+    public authToken: string | null = null;
 
     userUrl = environment.apiUrl + '/users';
     updateUrl = environment.apiUrl + '/users/'
@@ -33,9 +33,6 @@ export class UserService {
     }
 
     updateUser(data:any, id:number){
-        // const headers = { 'content-type': 'application/json'}  
-        // const body=JSON.stringify(user);
-        // console.log(body)
         return this.http.put(this.updateUrl+id, data)
         .pipe(map((res:any)=>{
             return res;
@@ -45,6 +42,7 @@ export class UserService {
     checkStorage(){
         const authToken = sessionStorage.getItem(AUTH_TOKEN_KEY);
         const userData = sessionStorage.getItem(AUTH_USER_DATA);
+        this.authToken = authToken;
         if (userData){
           this.userData = JSON.parse(userData) as any;
         }
@@ -53,15 +51,10 @@ export class UserService {
         }
       }
     
-    public isLoggedIn(){
-    this.authToken !== null;
-    this.checkStorage();
-    }
-
     public logout(){
     sessionStorage.clear();
     this.checkStorage();
-    this.router.navigate(['/login']); 
+    this.router.navigate(['/homepage']); 
     }
 
     login(authData: User){    
@@ -70,5 +63,10 @@ export class UserService {
         this.checkStorage();
         console.log(sessionStorage);
     }
+
+    public isLoggedIn(){
+        return this.authToken !== null;
+        }
+    
 
 }

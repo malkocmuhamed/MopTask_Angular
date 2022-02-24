@@ -1,13 +1,28 @@
 <mat-toolbar color="primary" class="nav">
-    <div class="example-button-container" (click)="viewUser()">
-        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
-          <mat-icon>home</mat-icon>
-        </button>
+    <div class="example-button-container" 
+    *ngIf="this.usersService.isLoggedIn()"
+    (click)="viewUser()">
+      <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+        <mat-icon>filter_list</mat-icon>
+      </button>
     </div>
-      <span style="margin-left: 20px;">Uredi profil</span>
-      <span class="example-spacer"></span> 
+      <span style="margin-left: 20px;" *ngIf="this.usersService.isLoggedIn()" >Dobrodošli {{this.getusername()}}!</span>
+      <span class="example-spacer"  *ngIf="this.usersService.isLoggedIn()"></span> 
     
-    <div class="logo">
+    <div class="example-button-container" 
+      *ngIf="!this.usersService.isLoggedIn()">
+          <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+            <mat-icon>home</mat-icon>
+          </button>
+    </div>
+    <span style="margin-left: 20px;"  *ngIf="!this.usersService.isLoggedIn()">HOMEPAGE</span>
+    <span class="example-spacer"  *ngIf="!this.usersService.isLoggedIn()"></span> 
+
+    <div class="logo" *ngIf="!this.usersService.isLoggedIn()">
+        <button mat-raised-button color="warn" routerLink="/register" style="margin-right: 10px;">Registracija</button>
+        <button mat-raised-button color="warn" routerLink="/login" style="margin-left: 10px;">Prijavi se</button>
+    </div>
+    <div class="logo" *ngIf="this.usersService.isLoggedIn()">
         <button mat-raised-button color="warn" (click)="logout()">Odjava</button>
     </div>
     

@@ -1,1 +1,38 @@
 <app-navbar></app-navbar>
+
+<!-- <div class="homediv" *ngIf="!this.usersService.isLoggedIn()">
+    <div class="divs">
+        <button mat-button (click)="openDialog1()">Pregled pitanja</button>
+    </div>
+
+    <div class="divs">
+        <button mat-button>Open dialog</button>
+    </div>
+
+    <div class="divs">
+        <button mat-button>Open dialog</button>
+    </div>
+</div> -->
+<mat-tab-group mat-align-tabs="center" *ngIf="!this.usersService.isLoggedIn()">
+    <div >
+        <mat-tab label="Lista pitanja"><app-homepagequestions></app-homepagequestions></mat-tab>
+        <mat-tab label="Korisnici s najviše odgovora">Content 2</mat-tab>
+        <mat-tab label="Hot questions">Content 3</mat-tab>
+    </div>
+  </mat-tab-group>
+  
+
+<form class="example-form" 
+*ngIf="this.usersService.isLoggedIn()"
+(ngSubmit)="addQuestion()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Postavite pitanje</mat-label>
+      <input matInput #message maxlength="256" placeholder="Pr. Kako sortirati podatke u json serveru?..."
+      type="text" name="question" [(ngModel)]="questionModel.question" #question="ngModel">
+      <mat-hint align="start"><strong>Ne otkrivajte privatne podatke</strong> </mat-hint>
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+    <div class="qnbtn">
+        <button mat-button>Postavi pitanje </button>
+    </div>
+  </form>

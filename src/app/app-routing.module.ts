@@ -9,19 +9,23 @@ const routes: Routes = [
 
   {
     path: '',
-    component: LoginComponent
+    component: HomepageComponent
   },
   {
     path: 'register',
     component: RegisterComponent
   },
   {
-    path: 'homepage',
-    component: HomepageComponent
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'navbar',
     component: NavbarComponent
+  },
+  {
+    path: 'homepage',
+    component: HomepageComponent
   },
   { path: '**', redirectTo: '' }
 
