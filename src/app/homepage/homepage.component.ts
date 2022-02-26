@@ -15,17 +15,9 @@ export class HomepageComponent implements OnInit {
   questionModel = <Question>{};
   public questions: Question[];
 
-  constructor(public dialog: MatDialog, 
+  constructor(
     public usersService: UserService,
     public questionService: QuestionService) { }
-
-  openDialog1() {
-    const dialogRef = this.dialog.open(HomepagequestionsComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
 
   ngOnInit(): void {
   }

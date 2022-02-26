@@ -1,27 +1,68 @@
-<!-- <table>
-    <tbody>
-        <tr *ngFor="let qn of questionData">
-            <td>{{qn.id}}</td>
-            <td>{{qn.question}}</td>
-        </tr>
-    </tbody>
-</table> -->
-<div class="tablediv">
+<div class="tablediv" *ngIf="!this.usersService.isLoggedIn()">
     <table class="table table-striped">
         <thead>
             <tr>
                 <th class="th">ID pitanja</th>
                 <th class="th">Pitanje</th>
+                <th class="th">Detalji o pitanju</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let qn of questionData ">
                 <td>{{qn.id}}</td>
-                <td>{{qn.question}}</td>
+                <td >{{qn.question}}</td>
             </tr>
         </tbody>
     </table>
 </div>
+
+<mat-accordion class="example-headers-align" multi  *ngFor="let qn of questionData">
+  <mat-expansion-panel *ngIf="this.usersService.isLoggedIn()">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Pitanje ID: {{qn.id}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{qn.question}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div class="tablediv">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th class="th">Odgovori</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let ans of answerData"
+              [value]="ans.id">
+                  <!-- <td>{{ans.id}}</td> -->
+                  <td>{{ans.answer}}</td>
+                  <!-- <td >{{ans.answe}}</td> -->
+              </tr>
+          </tbody>
+      </table>
+  </div>
+    
+    <form class="example-form" 
+    (ngSubmit)="addAnswer()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Postavite odgovor</mat-label>
+          <input matInput #message maxlength="256" placeholder="Odgovor" 
+          [(ngModel)]="answerModel.answer"
+          (ngModelChange)="changeQuestionAnswers($event)"
+          type="text" name="answer" #answer="ngModel">
+          <mat-hint align="start"><strong>Ne otkrivajte privatne podatke</strong> </mat-hint>
+          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+        <div class="qnbtn">
+            <button mat-button>Odgovori na pitanje</button>
+        </div>
+      </form>
+
+  </mat-expansion-panel>
+ 
   
 <!-- <div class="example-container mat-elevation-z8">
     <div class="example-loading-shade"
@@ -60,4 +101,4 @@
   
     <mat-paginator [length]="resultsLength" [pageSize]="20" aria-label="Select page of GitHub search results"></mat-paginator>
   </div>
-    -->
+  -->

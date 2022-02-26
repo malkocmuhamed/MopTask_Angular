@@ -119,9 +119,36 @@
     {
       "question": "kako se zoves",
       "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "question": "postavljam jos jedno pitanje",
+      "id": 7
+    },
+    {
+      "question": "pitanje novo",
+      "id": 8
+    },
+    {
+      "question": "pitanje novo",
+      "id": 9
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "answers": [
+    {
+      "answer": "Odgovor na prvo pitanje",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ]
 }

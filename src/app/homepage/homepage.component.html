@@ -1,18 +1,4 @@
 <app-navbar></app-navbar>
-
-<!-- <div class="homediv" *ngIf="!this.usersService.isLoggedIn()">
-    <div class="divs">
-        <button mat-button (click)="openDialog1()">Pregled pitanja</button>
-    </div>
-
-    <div class="divs">
-        <button mat-button>Open dialog</button>
-    </div>
-
-    <div class="divs">
-        <button mat-button>Open dialog</button>
-    </div>
-</div> -->
 <mat-tab-group mat-align-tabs="center" *ngIf="!this.usersService.isLoggedIn()">
     <div >
         <mat-tab label="Lista pitanja"><app-homepagequestions></app-homepagequestions></mat-tab>
@@ -21,7 +7,6 @@
     </div>
   </mat-tab-group>
   
-
 <form class="example-form" 
 *ngIf="this.usersService.isLoggedIn()"
 (ngSubmit)="addQuestion()">
@@ -36,3 +21,4 @@
         <button mat-button>Postavi pitanje </button>
     </div>
   </form>
+  <app-homepagequestions *ngIf="this.usersService.isLoggedIn()"></app-homepagequestions>

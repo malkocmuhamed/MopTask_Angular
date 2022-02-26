@@ -3,4 +3,5 @@ export class Question{
     question: string;
     questionuser: string;
     created_at: string;
+    answers: Array<string>;
 }

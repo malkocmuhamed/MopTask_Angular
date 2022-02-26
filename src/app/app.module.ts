@@ -29,6 +29,7 @@ import { HomepagequestionsComponent } from './homepagequestions/homepagequestion
 import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     MatInputModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatExpansionModule
     ],
   providers: [],
   bootstrap: [AppComponent]
