@@ -45,10 +45,10 @@ export class EditprofileComponent implements OnInit {
     return this.usersService.userData.password;
   }
 
-  editUser(){ 
-    this.usersService.updateUser(this.userModel, this.usersService.userData.id)
-    .subscribe(res=>{
-      alert("Ažurirali ste korisničke podatke!");
-    })
-  }
+  // editUser(){ 
+  //   this.usersService.updateUser(this.userModel, this.usersService.userData.id)
+  //   .subscribe(res=>{
+  //     alert("Ažurirali ste korisničke podatke!");
+  //   })
+  // }
 }

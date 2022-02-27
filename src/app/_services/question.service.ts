@@ -11,23 +11,17 @@ import { Answer } from '../_models/answer.model';
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
 
-    questionUrl = environment.apiUrl + '/questions';
-    answerUrl =   environment.apiUrl + '/answers';
+    questionUrl = environment.apiUrl + '/QuestionsAnswers/GetQuestions';
+    answerUrl =   environment.apiUrl + '/QuestionsAnswers/GetAnswers';
 
     constructor(
         private http: HttpClient, 
         private router: Router) {
          }
 
-    // getQuestions(){
-    //   return this.http.get(this.questionUrl+"?_page=1&_limit=20")
-    //     .pipe(map((res:any)=>{
-    //         return res;
-    //     }))
-    // }
-
+   
     getQuestions(): Observable<Question[]>{
-        return this.http.get<Question[]>(this.questionUrl+"?_page=1&_limit=20")
+        return this.http.get<Question[]>(this.questionUrl)
           .pipe(map((res:any)=>{
               return res;
           }))
@@ -53,13 +47,5 @@ export class QuestionService {
         console.log(body);
         return this.http.post(this.answerUrl, body, {'headers':headers});
     }
-
-    // postQuestion(question: Question): Observable<any> {
-    //     const headers = { 'content-type': 'application/json'}  
-    //     const body=JSON.stringify(question);
-    //     console.log(body);
-    //     return this.http.post(this.questionUrl, body, {'headers':headers});
-    // }
-
 
 }

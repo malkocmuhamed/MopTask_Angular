@@ -1,9 +1,22 @@
 <app-navbar></app-navbar>
 <mat-tab-group mat-align-tabs="center" *ngIf="!this.usersService.isLoggedIn()">
     <div >
-        <mat-tab label="Lista pitanja"><app-homepagequestions></app-homepagequestions></mat-tab>
-        <mat-tab label="Korisnici s najviše odgovora">Content 2</mat-tab>
-        <mat-tab label="Hot questions">Content 3</mat-tab>
+        <mat-tab label="Lista pitanja">
+          <app-homepagequestions>
+
+          </app-homepagequestions>
+        </mat-tab>
+        <mat-tab label="Korisnici s najviše odgovora">
+          <app-homepage-users>
+
+          </app-homepage-users>
+        </mat-tab>
+        <mat-tab label="Hot questions">
+          <app-homepagequestions>
+
+          </app-homepagequestions>
+        </mat-tab>
+        
     </div>
   </mat-tab-group>
   

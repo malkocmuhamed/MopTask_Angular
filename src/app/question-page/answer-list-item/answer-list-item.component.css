@@ -1,0 +1,23 @@
+.answer-item {
+    background-color:lightcyan;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 12px;
+    width: 100%;
+}
+
+.answer-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.answer-created-by {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.answer-date {
+    font-size: 12px;
+    opacity: 0.5;
+}

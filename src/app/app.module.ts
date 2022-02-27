@@ -13,7 +13,6 @@ import {IconsModule } from 'angular-bootstrap-md'
 import { CardsModule } from 'angular-bootstrap-md'
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms'
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -30,6 +29,15 @@ import {MatInputModule} from '@angular/material/input';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { QuestionListComponent } from './shared/question-list/question-list.component';
+import { QuestionListItemComponent } from './shared/question-list-item/question-list-item.component';
+import { UserListComponent } from './shared/user-list/user-list.component';
+import { UserListItemComponent } from './shared/user-list-item/user-list-item.component';
+import { HomepageUsersComponent } from './shared/homepage-users/homepage-users.component';
+import { HomepageHotQuestionsComponent } from './shared/homepage-hot-questions/homepage-hot-questions.component';
+import { QuestionPageComponent } from './question-page/question-page.component';
+import { AnswerListComponent } from './question-page/answer-list/answer-list.component';
+import { AnswerListItemComponent } from './question-page/answer-list-item/answer-list-item.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +48,16 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NavbarComponent,
     ProfilepageComponent,
     EditprofileComponent,
-    HomepagequestionsComponent
+    HomepagequestionsComponent,
+    QuestionListComponent,
+    QuestionListItemComponent,
+    UserListComponent,
+    UserListItemComponent,
+    HomepageUsersComponent,
+    HomepageHotQuestionsComponent,
+    QuestionPageComponent,
+    AnswerListComponent,
+    AnswerListItemComponent
   ],
   imports: [
     HttpClientModule,
@@ -54,7 +71,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
     CardsModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

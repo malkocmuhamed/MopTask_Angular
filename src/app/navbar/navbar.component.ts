@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProfilepageComponent } from '../profilepage/profilepage.component';
 import { User } from '../_models/user.model';
+import { AuthenticationService } from '../_services/authentication.service';
 import { UserService } from '../_services/user.service';
 
 @Component({
@@ -12,10 +13,19 @@ import { UserService } from '../_services/user.service';
 export class NavbarComponent implements OnInit {
 
   public users: User[];
-  constructor(public dialog: MatDialog, public usersService: UserService) { }
+  constructor(public dialog: MatDialog, 
+    public usersService: UserService,
+    private authenticationService: AuthenticationService) { }
+   
+   public user: User;
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {
+    this.authenticationService
+    .getLoggedInUserData()
+    .subscribe(user => {
+        this.user = user;
+    });
+  } 
 
   // isLoggedIn(){
   //   return this.usersService.isLoggedIn();
@@ -33,9 +43,9 @@ export class NavbarComponent implements OnInit {
   getusername(){
     return this.usersService.userData.firstName;
   }
-
+ 
   logout(){
-    this.usersService.logout();
+    this.authenticationService.logout();
   }
-
+  
 }

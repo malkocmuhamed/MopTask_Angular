@@ -1,0 +1,38 @@
+<div class="question-item">
+    <div class="row">
+        <div class="col-md-8 question-posted-by">
+            Posted by: {{questionListItem.createdByName}}
+        </div>
+
+
+        <div class="col-md-4 question-date">
+            {{questionListItem.questionDate}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 question-text">
+            {{questionListItem.questionText}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-1 thumbs-up-icon">
+            <mat-icon class="thumbs-up-icon" *ngIf="questionPage">thumb_up</mat-icon>
+        </div>
+        <div class="col-md-1 thumbs-down-icon">
+            <mat-icon class="thumbs-down-icon" ngIf="questionPage">thumb_down</mat-icon>
+        </div>
+        <div class="col-md-1 thumbs-down-icon">
+            <mat-icon class="comment-icon" ngIf="questionPage" (click)="seeMoreComments()">comment</mat-icon>
+        </div>
+    </div>
+</div>
+
+
+<app-answer-list 
+    *ngIf="questionPage"
+    [question]="questionListItem"
+    [seeMoreCommentEvent]="seeMoreCommentEvent">
+</app-answer-list>
+
